@@ -1,0 +1,150 @@
+unum function min(unum x, unum y)
+[
+	var unum  res;
+	is: x > y #
+	istrue [res = x;]
+	isfalse [res = y;]#
+	return res;
+]
+noret function stand (list a, list b)
+[
+	var list str;
+	str = concat(a,b);
+	writeline;
+        print "Result: ";
+	print str;
+	writeline;
+        
+	return;
+]
+main[
+	
+	var unum eights=q021;
+	print eights;
+	writeline;
+	print "----------------------";
+	writeline;
+	
+
+	var list str;
+	var unum abc = 2;
+	var unum abcd = 4;
+	print "("; print abc; print ">="; print abcd; print ") :";
+	is: abc ~ abcd #
+	istrue [str="True";]
+	isfalse [str="False";]#
+	print str;
+	writeline;
+	print "----------------------";
+	writeline;
+
+	
+
+	var char mh = 'H';
+	var char mi = 'i';
+	var char miv = '!';
+	print mh;
+	print mi;
+	print miv;
+	writeline;
+	print "----------------------";
+	writeline;
+
+	
+	var list dsa = "False";
+	var list ytr = "False";
+	print "Compare: ";
+	var unum  asd;
+	asd=compare(dsa,ytr);
+	is: asd & 1 #
+	istrue [print "The lines are the same";]
+	isfalse [print "The lines are not the same";]#
+	writeline;
+	print "----------------------";
+	writeline;
+
+	
+	print "Exponentiation of a number: ";
+	var unum  p = 8;
+	p = poww(2,p);
+	print p;
+	writeline;
+	print "----------------------";
+	writeline;
+
+	
+	var unum  u=2;
+	var unum  v=3;
+	var unum  r;
+	print "Arithmetic expression:  ";
+	r=u+v*2-(4+4)/2 + min(5, 8);
+	print r;
+	writeline;
+	print "----------------------";
+	writeline;
+
+
+	var list c = "77";
+	var unum  e;	
+    print "Converting a string to a number: ";
+    e = atoii(c);
+    print e;
+    writeline;
+	print "----------------------";
+	writeline;
+
+	
+	var unum k;
+	var list len="Hello, World!";
+	k = slength(len);
+    print "Line length:";
+	print k;
+    writeline;
+	print "----------------------";
+	writeline;
+        
+    var unum numb=41;
+	var unum  remainder;
+	remainder = numb % 6;
+	print "Remainder after division 41 by 6 : ";
+	print remainder;
+	writeline;
+	print "----------------------";
+	writeline;
+
+
+	var unum  result;
+	var unum sdv=2;
+    result = sdv{4;
+	print "Number after shifted to the left : "; 
+	print result;
+    writeline;
+	print "----------------------";
+	writeline;
+	
+	
+	var list poit="POIT ";
+	var list isit=" ISIT";
+	
+	var unum poi = 4;
+	var unum isi = 4;
+	is: poi @ isi #
+	istrue [stand(poit,isit);]
+	isfalse [print "Error";]#
+	print "----------------------";
+	writeline;
+
+
+       
+ 	var unum  ab = 1;
+	print "Cycle from 1 to 5: ";
+	is: ab ! 5 #
+	cycle [
+		print ab;
+		print " ";
+		ab = ab +1;
+	]#
+	print ab;
+	writeline;
+	
+]
